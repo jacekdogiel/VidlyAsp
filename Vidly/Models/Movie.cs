@@ -14,7 +14,9 @@ namespace Vidly.Models
         [Required]
         public byte GenreId { get; set; }
         public DateTime DateAdded { get; set; }
+        [Required]
         public DateTime ReleaseDate { get; set; }
+        [Range(1, 20, ErrorMessage = "Number should be between 1-20.")]
         public byte NumbersInStock { get; set; }
     }
 }
